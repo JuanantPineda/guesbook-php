@@ -7,5 +7,4 @@ ENV DB_USER guesbook
 ENV DB_PASSWORD guesbook
 ENV DB_NAME guesbook
 COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
-COPY app/Sistema-de-biblioteca-basico-php-8-y-mysql/biblioteca.sql /opt
 RUN chmod +x /usr/local/bin/docker-entrypoint.sh

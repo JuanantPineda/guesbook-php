@@ -1,5 +1,5 @@
 #!/bin/bash
-while ! mysql -u ${DB_USER} -p${DB_PASS} -h ${DB_HOST}  -e ";" ; do
+while ! mysql -u ${DB_USER} -p${DB_PASSWORD} -h ${DB_HOST}  -e ";" ; do
 	sleep 1
 done
 

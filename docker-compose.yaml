@@ -1,0 +1,31 @@
+version: '3.1'
+services:
+  app:
+    container_name: guesbook
+    image: juanantpineda/guesbook:v1
+    restart: always
+    environment:
+      DB_HOST: mariadb
+      DB_USER: guesbook
+      DB_PASSWORD: guesbook
+      DB_NAME: guesbook
+    ports:
+      - 8089:80
+    volumes:
+      - guesbook_log:/var/log/apache2/
+    depends_on:
+      - db
+  db:
+    container_name: mariadb
+    image: juanantpineda/mariadb:v1
+    restart: always
+    environment:
+      MARIADB_DATABASE: guesbook
+      MARIADB_USER: guesbook
+      MARIADB_PASSWORD: guesbook
+      MARIADB_ROOT_PASSWORD: root
+    volumes:
+      - mariadbpineda_data:/var/lib/mysql
+volumes:
+    mariadbpineda_data:
+    guesbook_log:
