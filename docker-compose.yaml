@@ -5,7 +5,7 @@ services:
     image: juanantpineda/guestbook:v1
     restart: always
     environment:
-      DB_HOST: mariadb
+      DB_HOST: mimariadb
       DB_USER: guestbook
       DB_PASSWORD: guestbook
       DB_NAME: guestbook
