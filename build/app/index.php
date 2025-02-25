@@ -26,7 +26,7 @@ $messages = $pdo->query("SELECT message, created_at FROM messages ORDER BY creat
 </head>
 <body>
     <div class="container">
-        <h2>Guestbook</h2>
+        <h2>Juan Antonio Pineda Amador</h2>
         <form method="POST">
             <input type="text" name="message" placeholder="Write a message..." required>
             <button type="submit">Submit</button>
