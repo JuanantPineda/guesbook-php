@@ -1,31 +1,31 @@
 version: '3.1'
 services:
   app:
-    container_name: guesbook
-    image: juanantpineda/guesbook:v1
+    container_name: guestbook
+    image: juanantpineda/guestbook:v1
     restart: always
     environment:
       DB_HOST: mariadb
-      DB_USER: guesbook
-      DB_PASSWORD: guesbook
-      DB_NAME: guesbook
+      DB_USER: guestbook
+      DB_PASSWORD: guestbook
+      DB_NAME: guestbook
     ports:
       - 8089:80
     volumes:
-      - guesbook_log:/var/log/apache2/
+      - guestbook_log:/var/log/apache2/
     depends_on:
       - db
   db:
-    container_name: mariadb
-    image: juanantpineda/mariadb:v1
+    container_name: mimariadb
+    image: juanantpineda/mimariadb:v1
     restart: always
     environment:
-      MARIADB_DATABASE: guesbook
-      MARIADB_USER: guesbook
-      MARIADB_PASSWORD: guesbook
+      MARIADB_DATABASE: guestbook
+      MARIADB_USER: guestbook
+      MARIADB_PASSWORD: guestbook
       MARIADB_ROOT_PASSWORD: root
     volumes:
       - mariadbpineda_data:/var/lib/mysql
 volumes:
     mariadbpineda_data:
-    guesbook_log:
+    guestbook_log:
