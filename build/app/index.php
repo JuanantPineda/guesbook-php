@@ -21,7 +21,7 @@ $messages = $pdo->query("SELECT message, created_at FROM messages ORDER BY creat
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Guestbook</title>
+    <title>Juan Antonio Pineda Amador</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
